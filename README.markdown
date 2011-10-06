@@ -55,7 +55,9 @@ When phrasify is passed a single array, optionally followed by an options hash, 
           ['happen in the', ['morning', 'afternoon'], use_or],
           ['cost', [], use_or]
         ]],
-    ], {:join => ' '}) # => 'Sorry!  There are no search results for Theater or Art & Entertainment events between jan 4th and jan 15th that happen in the morning or afternoon'
+    ], {:join => ' '}) 
+    # => 'Sorry!  There are no search results for Theater or Art & Entertainment 
+    #     events between jan 4th and jan 15th that happen in the morning or afternoon'
       
 
 Copyright (c) October 6 2011, by Alex Cox 
