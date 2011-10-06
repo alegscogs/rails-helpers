@@ -37,10 +37,18 @@ Phrasify invokes rails' Array#to_sentence, and takes its options:
     phrasify ['on', 'on either'], ['jan 4th', 'dec 8th', 'march 20th'], {:last_word_connector => ' or ', :two_words_connector => ' or '}
     # => 'on either jan 4th, dec 8th, or march 20th'
 
-Nested arrays in the arguments will be exploded as arguments for nested calls to phrasify:
+Nested arrays will be exploded and passed recursively as arguments:
 
     phrasify 'on', ['jan 4th', [['on the morning of', 'on the mornings of'], ['jan 5th', 'jan 6th']]] 
     # => 'on jan 4th and on the mornings of jan 5th and jan 6th'
+
+An introductory string followed by an empty array returns nil, or gets ignored in the case of nested arguments:
+
+    phrasify 'on', []
+    # => nil
+
+    phrasify 'on', ['jan 4th', []]
+    # => 'on jan 4th'
 
 When phrasify is passed a single array, optionally followed by an options hash, after attempting to resolve any nested phrases, it will invoke #to_sentence on the resulting array of strings.  In this case, passing a :join option will cause Array#join to be used instead of Array#to_sentence, with the value of the join option passed as parameters to the join call.
 
