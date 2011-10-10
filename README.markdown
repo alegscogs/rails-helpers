@@ -1,10 +1,10 @@
 Alegscogs Helpers
 -----------------
 
-These are some rails views helpers that I've found useful.
+Some views helpers for Rails3 apps that I've found useful.
 
-Phrasify
---------
+phrasify()
+----------
 
 Takes collections of strings and arrays of strings as arguments, and tries to output meaningful phrases.
 
