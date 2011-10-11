@@ -1,4 +1,4 @@
-module AlegscogsHelpers
+module AlegsCogsHelpers
   module ViewHelpers
     def phrasify(*args)
       options = args.extract_options!

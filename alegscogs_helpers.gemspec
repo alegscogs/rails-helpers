@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = "alegscogs_helpers"
-  s.version = 0.1
+  s.version = "0.1.1"
   s.authors = ["Alex Cox"]
   s.email   = ["alegscogs@gmail.com"]
   s.homepage = "http://github.com/alegscogs/rails-helpers"
